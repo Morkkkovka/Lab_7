@@ -1,0 +1,67 @@
+﻿<Window x:Class="TS_AN_LAB7__Array_1_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TS_AN_LAB7__Array_1_"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ArrayCalculator" Height="750" Width="900">
+    <Grid Background="#A5871C" x:Name="AllButtons">
+        <Border Margin="70,82,61,65" Background="#EAB700" VerticalAlignment="Center" Padding="45"  CornerRadius="20" Height="550"  >
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="5" Color="#6A5A20" ShadowDepth="3" />
+            </Border.Effect>
+
+            <StackPanel>
+
+                <TextBlock Text="Здравствуйте!" FontSize="20" FontWeight="Bold" Margin="0 0 0 5"/>
+                <StackPanel>
+                    <Grid>
+                        <TextBox x:Name="ArrayElements" materialDesign:HintAssist.Hint="Введите элементы массива!"  Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Margin="0,0,426,0" PreviewMouseLeftButtonDown="ArrayElements_PreviewMouseLeftButtonDown"/>
+                        <Button x:Name="Make" HorizontalAlignment="Right" Content="Вычислить!" Click="Make_Click" TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="180" Margin="0,10,0,3"/>
+                    </Grid>
+                    <Grid>
+                        <TextBox x:Name="AvtoArray" materialDesign:HintAssist.Hint="Введите размерность массива!" Style="{StaticResource MaterialDesignFloatingHintTextBox}"  Margin="0,0,426,0"/>
+                        <Button x:Name="AvtoSolveArray" HorizontalAlignment="Right" Click="AvtoSolveArray_Click" Content="Вычислить автоматически!"  TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="180" Margin="0,10,0,3"/>
+                    </Grid>
+                   
+                </StackPanel>
+
+                <StackPanel>
+
+                    <StackPanel>
+                        <Button x:Name="MaxArray" HorizontalAlignment="Stretch" Content="Наибольшее значение массива"  TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="263"  Margin="0 10 0 5"/>
+                        <TextBlock x:Name="ResultMaxArray" Text="Результат!" HorizontalAlignment="Stretch" Margin="0 3 0 3" FontStyle="Normal"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Button x:Name="MinArray" HorizontalAlignment="Stretch" Content="Наименьшее значение массива" TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="263"  Margin="0 5 0 5"/>
+                        <TextBlock x:Name="ResultMinArray" Text="Результат!" HorizontalAlignment="Stretch" Margin="0 3 0 3" FontStyle="Normal"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Button x:Name="SumArray" HorizontalAlignment="Stretch" Content="Сумма элементов" TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="263" Margin="0 5 0 5"/>
+                        <TextBlock x:Name="ResultSumArray" Text="Результат!" HorizontalAlignment="Stretch" Margin="3 10 0 3" FontStyle="Normal"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Button x:Name="MiddleArray" HorizontalAlignment="Stretch" Content="Среднее арифметическое элементов" TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="263" Margin="0 5 0 5"/>
+                        <TextBlock x:Name="ResultMiddlArray" Text="Результат!" HorizontalAlignment="Stretch" Margin="0 3 0 3" FontStyle="Normal"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Button x:Name="NumArray" HorizontalAlignment="Stretch" Content="Все нечетные значения" TextBlock.FontSize="13" TextBlock.FontWeight="Thin" Width="263" Margin="0 5 0 5"/>
+                        <TextBlock x:Name="ResultNumArray" Text="Результат!" HorizontalAlignment="Stretch" Margin="3 5 0 3" FontStyle="Normal"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+
+
+
+        </Border>
+
+    </Grid>
+</Window>
